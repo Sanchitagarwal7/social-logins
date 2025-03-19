@@ -34,7 +34,7 @@ passport.use( //*specify what the passport need to do and fetch info
     new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'http://localhost:3000/auth/google/callback'
+        callbackURL: 'https://social-logins.vercel.app/auth/google/callback'
     }, (accessToken, refreshToken, profile, done)=>{ //*get access token -> refresh the token -> get profile ->  done
         return done(null, profile);     //* when done -> return the profile
         } 
@@ -45,7 +45,7 @@ passport.use(
     new FacebookStrategy({
         clientID: process.env.FACEBOOK_CLIENT_ID,
         clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-        callbackURL: 'http://localhost:3000/auth/facebook/callback'
+        callbackURL: 'https://social-logins.vercel.app/auth/facebook/callback'
     }, (accessToken, refreshToken, profile, done)=>{
         return done(null, profile);
     })
@@ -55,7 +55,7 @@ passport.use(
     new GithubStrategy({
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: 'http://localhost:3000/auth/github/callback'
+        callbackURL: 'https://social-logins.vercel.app/auth/github/callback'
     }, (accessToken, refreshToken, profile, done)=>{
         return done(null, profile);
     })
@@ -65,7 +65,7 @@ passport.use(
     new TwitterStrategy({
         consumerKey: process.env.TWITTER_CLIENT_ID,
         consumerSecret: process.env.TWITTER_CLIENT_SECRET,
-        callbackURL: 'http://localhost:3000/auth/twitter/callback'
+        callbackURL: 'https://social-logins.vercel.app/auth/twitter/callback'
     }, (token, tokenSecret, profile, done)=>{
         return done(null, profile);
     })
@@ -77,7 +77,7 @@ passport.use(
     new DiscordStrategy({
         clientID: process.env.DISCORD_CLIENT_ID,
         clientSecret: process.env.DISCORD_CLIENT_SECRET,
-        callbackURL: 'http://localhost:3000/auth/discord/callback',
+        callbackURL: 'https://social-logins.vercel.app/auth/discord/callback',
         scope: scopes
     }, (accessToken, refreshToken, profile, done)=>{
         return done(null, profile);
@@ -86,8 +86,8 @@ passport.use(
 
 passport.use(
     new SteamStrategy({
-        returnURL: 'http://localhost:3000/auth/steam/callback',
-        realm: 'http://localhost:3000/',
+        returnURL: 'https://social-logins.vercel.app/auth/steam/callback',
+        realm: 'https://social-logins.vercel.app/',
         profile: false,
         apiKey: null
     }, (identifier, profile, done)=>{
