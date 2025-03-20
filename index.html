@@ -28,6 +28,12 @@
         td{
             padding: 10px;
         }
+
+        .unclickable{
+            display: inline-block;
+            pointer-events: none;
+        }
+
     </style>
 </head>
 <body>
@@ -59,7 +65,7 @@
                         Facebook
                     </td>
                     <td>
-                        <a href="/auth/facebook">
+                        <a href="/auth/facebook" class="unclickable">
                             <i class="fa-brands fa-facebook" style="font-size:24px;"></i>
                         </a>
                     </td>
@@ -79,7 +85,7 @@
                         Twitter
                     </td>
                     <td>
-                        <a href="/auth/twitter">
+                        <a href="/auth/twitter" class="unclickable">
                             <i class="fa-brands fa-twitter" style="font-size:24px;"></i>
                         </a>
                     </td>
