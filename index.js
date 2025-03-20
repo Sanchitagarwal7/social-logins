@@ -34,7 +34,7 @@ passport.use( //*specify what the passport need to do and fetch info
     new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'https://social-logins.vercel.app/auth/google/callback'
+        callbackURL: 'https://social-logins-4xozqqnor-sanchitagarwal7s-projects.vercel.app/auth/google/callback'
     }, (accessToken, refreshToken, profile, done)=>{ //*get access token -> refresh the token -> get profile ->  done
         return done(null, profile);     //* when done -> return the profile
         } 
